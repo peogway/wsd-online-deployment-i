@@ -1,0 +1,6 @@
+<h1>
+  <%= it.title %>
+</h1>
+<p>
+  The current count is <%= it.count %>.
+</p>
