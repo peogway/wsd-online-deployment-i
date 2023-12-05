@@ -20,7 +20,7 @@ const handleRequest = async (request) => {
     return new Response(await renderFile("count.eta", data), responseDetails);
   }
 
-  return new Response("Hel dyou!");
+  return new Response("Hello you!");
 };
 
 serve(handleRequest, { port: 7777 });
