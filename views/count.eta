@@ -1,1 +1,1 @@
-<h1>Visits  : <%= it.count %></h1>
+Visits  : <%= it.count %>
