@@ -23,7 +23,7 @@ const handleRequest = async (request) => {
 
     return new Response(await renderFile("index.eta", data), responseDetails);
   } else {
-    return new Response("Not found", { status: 404 });
+    return new Response("Not fodfundsffd", { status: 404 });
   }
 };
 
