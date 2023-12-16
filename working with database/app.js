@@ -31,7 +31,7 @@ const handleRequest = async (request) => {
     return new Response(`Total rows: ${rowCount}`);
   }
 
-  return new Response("Hello you!");
+  return new Response("Hello youuu!");
 };
 
 serve(handleRequest, { port: 7777 });
