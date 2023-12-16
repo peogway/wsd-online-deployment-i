@@ -1,2 +1,10 @@
-<% layout("./layouts/layout.eta") %>    
-<h1>Visits: <%= it.count %></h1>
+<h1>Some Roman emperors</h1>
+<form method="POST">
+  <input type="text" name="name" />
+  <input type="submit" />
+</form>
+<ul>
+  <% it.emperors.forEach((emperor) => { %>
+    <li><%= emperor %></li>
+  <% }); %>
+</ul>
