@@ -4,7 +4,7 @@ EXPOSE 7777
 
 WORKDIR /app
 
-COPY . "application example 1"
+COPY . application example 1
 
 RUN deno cache "application exemple 1"/dep.js
 
