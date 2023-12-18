@@ -7,6 +7,6 @@ WORKDIR /app
 COPY ["application example 1", "."]
 
 
-RUN deno cache app/dep.js
+RUN deno cache dep.js
 
 CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "app.js" ]
