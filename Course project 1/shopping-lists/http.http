@@ -1,0 +1,3 @@
+curl -X POST -d "measurement=17" http://localhost:7777
+###
+curl -x GET http://localhost:7777/lists

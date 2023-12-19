@@ -1,0 +1,27 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1><%=it.name_shopping_list%></h1>
+
+<form method="POST" action="/lists/<%=it.id_list%>">
+    <input type="text" name="name"/>
+    <input type="submit" value="Add shopping list item!"/>
+</form>
+
+<ul>
+    <%for(list of it.list_items){%>
+        <%if (list.collected===true){%>
+            <li>
+                <del><%=list.name%></del>
+            </li>
+        <%}else{%>
+            <li>
+                <%=list.name%>
+                <form method="POST" action="/lists/<%=it.id_list%>/items/<%=list.id%>/collect">
+                    <input type="submit" value="Mark collected!"/>
+                </form>
+            </li>
+        <%}%>
+    <%}%>
+</ul>
+
+<a href="/lists">shopping lists</a>
