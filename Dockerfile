@@ -4,7 +4,7 @@ EXPOSE 7777
 
 WORKDIR /app
 
-COPY ["Course project 1"/shopping-lists, "."]
+COPY ["Course project 1/shopping-lists", "."]
 
 
 RUN deno cache dep.js
