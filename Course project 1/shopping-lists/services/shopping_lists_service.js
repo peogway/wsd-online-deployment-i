@@ -17,4 +17,9 @@ const find_shopping_list_name_by_id = async (id) => {
     return rows[0].name;
 };
 
-export {find_active_shopping_lists, create_shopping_lists, deactivate_shopping_list, find_shopping_list_name_by_id};
+const find_all_shopping_lists = async () => {
+    const rows= await sql`select * from shopping_lists`;
+    return rows.length;
+};
+
+export {find_active_shopping_lists, create_shopping_lists, deactivate_shopping_list, find_shopping_list_name_by_id, find_all_shopping_lists};

@@ -17,4 +17,9 @@ const collect_shopping_list_item = async (id_shopping_list, id_item) => {
         where shopping_list_id=${id_shopping_list} and id=${id_item}`;
 };
 
-export {find_shopping_list_items, create_shopping_list_item, collect_shopping_list_item};
+
+const find_all_shopping_list_items = async () => {
+    const rows= await sql`select * from shopping_list_items`;
+    return rows.length;
+};
+export {find_shopping_list_items, create_shopping_list_item, collect_shopping_list_item, find_all_shopping_list_items};
