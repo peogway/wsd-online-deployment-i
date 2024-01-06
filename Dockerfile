@@ -7,6 +7,4 @@ WORKDIR /app
 COPY ["handling binary content", "."]
 
 
-RUN deno cache deps.js
-
 CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "app.js" ]
