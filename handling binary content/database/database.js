@@ -1,7 +1,7 @@
 import postgres from "https://deno.land/x/postgresjs@v3.4.2/mod.js";
 
 
-  sql = postgres({
+ const sql = postgres({
     host: "flora.db.elephantsql.com",
     database: "legjwppq",
     username: "legjwppq",
