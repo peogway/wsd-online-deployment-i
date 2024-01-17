@@ -7,4 +7,4 @@ WORKDIR /app
 COPY ["Course Project 2/drill-and-pracetice", "."]
 
 
-CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "./drill-and-practice/app-launch.js" ]
+CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "app-launch.js" ]
