@@ -4,7 +4,7 @@ EXPOSE 7777
 
 WORKDIR /app
 
-COPY ["handling binary content", "."]
+COPY ["Course Project 2", "."]
 
 
-CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "app.js" ]
+CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "./drill-and-practice/app-launch.js" ]
