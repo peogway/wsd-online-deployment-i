@@ -1,0 +1,33 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>List of topics:</h1>
+
+<ul>
+<% for(topic of it.topics) { %>
+    <li>
+        <a href="/topics/<%= topic.id %>"><%= topic.name %></a>
+        <% if (it.admin){ %>
+            <form method="POST" action="/topics/<%= topic.id %>/delete">
+                <input type="submit" value="Delete"/>
+            </form>
+        <% }; %>
+    </li>
+<% }; %>
+</ul>
+
+<% if (it.admin){ %>
+    <form method="POST" action="/topics">
+        Topic name:<br/>
+        <input type="text" name="name"/><br/>
+        <% if (it.errors) { %>
+        <ul>
+            <% Object.keys(it.errors).forEach((attribute) => { %>
+                <% Object.values(it.errors[attribute]).forEach((err) => { %>
+                    <li><%= err %></li>
+                <% }); %>
+            <% }); %>
+        </ul>
+        <% }; %>
+        <input type ="submit" value="Add a new topic!"/>
+    </form>
+<% }; %>
