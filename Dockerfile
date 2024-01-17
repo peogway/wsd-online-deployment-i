@@ -4,7 +4,7 @@ EXPOSE 7777
 
 WORKDIR /app
 
-COPY ["Course Project 2/drill-and-pracetice", "."]
+COPY ["Course Project 2/drill-and-practice", "."]
 
 
 CMD [ "run","--allow-read", "--allow-env", "--allow-net", "--watch", "--unstable", "app-launch.js" ]
